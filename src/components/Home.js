@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 function Home({ darkMode }) {
   const [message, setMessage] = useState('Hello from Home!');
+  const [inputText, setInputText] = useState('');
 
   useEffect(() => {
     // Animate on component mount
@@ -20,20 +21,29 @@ function Home({ darkMode }) {
   }, []);
 
   const updateMessage = () => {
-    setMessage('Updated message!');
+    setMessage(inputText || 'Updated message!');
   };
 
   return (
     <div id="home" className={`text-center mt-3 ${darkMode ? 'text-white' : 'text-dark'}`}>
       <h2>Home</h2>
-      <div className={`card ${darkMode ? 'bg-dark' : 'bg-light'}`}>
+      <div className={`card ${darkMode ? 'bg-dark text-white' : 'bg-light text-dark'}`}>
         <div className="card-body">
           <p className="card-text">{message}</p>
+          <div className="form-group">
+            <input
+              type="text"
+              className={`form-control ${darkMode ? 'bg-dark text-white' : 'bg-light text-black'}`}
+              placeholder="Enter text"
+              value={inputText}
+              onChange={(e) => setInputText(e.target.value)}
+            />&nbsp;
+          </div>
           <button
             id="updateButton"
             className={`btn ${darkMode ? 'btn-outline-light' : 'btn-outline-dark'}`}
             onClick={updateMessage}
-          >
+           >
             Update Message
           </button>
         </div>

@@ -1,7 +1,7 @@
 // src/App.js
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/About';
 import Home from './components/Home';
@@ -17,14 +17,14 @@ function App() {
     <Router>
       <div className={`container mt-4 ${darkMode ? 'dark-mode' : ''}`}>
         <nav className={`navbar navbar-expand-lg ${darkMode ? 'navbar-dark bg-dark' : 'navbar-light bg-light'}`}>
-          <Link className="navbar-brand" to="/">
+          <NavLink className="navbar-brand" to="/" exact>
             React SPA
-          </Link>
+          </NavLink>
           <button
             className={`navbar-toggler ${darkMode ? 'navbar-dark' : 'navbar-light'}`}
             type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -34,14 +34,14 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/">
+                <NavLink className="nav-link" to="/" exact>
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <NavLink className="nav-link" to="/about">
                   About
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
                 <label className="switch">
@@ -56,8 +56,8 @@ function App() {
         <hr />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Home darkMode={darkMode} />} />
+          <Route path="/about" element={<About darkMode={darkMode} />} />
         </Routes>
       </div>
     </Router>
