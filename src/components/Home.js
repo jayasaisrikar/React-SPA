@@ -59,8 +59,7 @@ function Home({ darkMode }) {
           />
           <h2 className={`mt-4 ${darkMode ? 'text-white' : 'text-dark'}`}>Featurette 1</h2>
           <p className={`lead ${darkMode ? 'text-white' : 'text-dark'}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac diam sit amet quam vehicula elementum
-            sed sit amet dui.
+            This is a Sample Featurette
           </p>
         </div>
         <div className="col-lg-4">
@@ -71,8 +70,7 @@ function Home({ darkMode }) {
           />
           <h2 className={`mt-4 ${darkMode ? 'text-white' : 'text-dark'}`}>Featurette 2</h2>
           <p className={`lead ${darkMode ? 'text-white' : 'text-dark'}`}>
-            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum
-            porta.
+            This is a Sample Featurette
           </p>
         </div>
         <div className="col-lg-4">
@@ -83,8 +81,7 @@ function Home({ darkMode }) {
           />
           <h2 className={`mt-4 ${darkMode ? 'text-white' : 'text-dark'}`}>Featurette 3</h2>
           <p className={`lead ${darkMode ? 'text-white' : 'text-dark'}`}>
-            Donec rutrum congue leo eget malesuada. Sed porttitor lectus nibh. Curabitur non nulla sit amet nisl
-            tempus convallis quis ac lectus.
+            This is a Sample Featurette
           </p>
         </div>
       </div>
