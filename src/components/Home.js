@@ -53,7 +53,7 @@ function Home({ darkMode }) {
       <div className="row mt-5">
         <div className="col-lg-4">
           <img
-            src="https://via.placeholder.com/300"
+            src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_1280.jpg"
             alt="Featurette 1"
             className={`img-fluid rounded-circle ${darkMode ? 'border-light' : 'border-dark'}`}
           />
@@ -64,7 +64,7 @@ function Home({ darkMode }) {
         </div>
         <div className="col-lg-4">
           <img
-            src="https://via.placeholder.com/300"
+            src="https://cdn.pixabay.com/photo/2013/10/02/23/03/mountains-190055_1280.jpg"
             alt="Featurette 2"
             className={`img-fluid rounded-circle ${darkMode ? 'border-light' : 'border-dark'}`}
           />
@@ -75,7 +75,7 @@ function Home({ darkMode }) {
         </div>
         <div className="col-lg-4">
           <img
-            src="https://via.placeholder.com/300"
+            src="https://cdn.pixabay.com/photo/2017/02/01/22/02/mountain-landscape-2031539_1280.jpg"
             alt="Featurette 3"
             className={`img-fluid rounded-circle ${darkMode ? 'border-light' : 'border-dark'}`}
           />
